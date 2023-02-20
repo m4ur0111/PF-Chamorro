@@ -1,0 +1,58 @@
+/* Barra de Navegación Responsive */ 
+header{
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    /*Header Mobile*/
+    .contenedor-header{
+        max-width: 1200px;
+        height: 100%;
+        margin: auto;
+        .menu{
+            background-color: $color-body;
+            width: 100%;
+            position: relative;
+            @media screen and (min-width: 900px) {
+                margin-left: 1rem;
+            }
+            ul{
+                li{
+                    a{
+                        font-size: 16px;
+                        margin-right: 1rem;
+                        color: black;
+                        @media screen and (min-width: 900px) {
+                            font-size: 16px;
+                            margin-right: 1.2rem;
+                            color: black;
+                        }
+                    }
+                    a:hover{
+                        color: $color-principal;
+                    }
+                }
+            }
+        }
+        /*Header Desktop*/
+        nav{
+            a{
+                .logo-mobile{
+                    width: 75px;
+                    height: 80px;
+                    margin-left: 1rem;
+                    @media screen and (min-width: 1100px) {
+                        display: none;
+                    }
+                }
+                .logo{
+                    display: none;
+                    @media screen and (min-width: 1100px) {
+                        display: block;
+                        width: 245px;
+                        height: 80px;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

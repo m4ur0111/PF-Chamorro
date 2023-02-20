@@ -1,0 +1,109 @@
+/* Footer Responsive */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    height: 480px;
+    padding: 1rem 8%;
+    background-color: $color-footer;
+    .container{
+        .row{
+            .col{
+                img{
+                    margin-top: 15px;
+                    width: 200px;
+                }
+                h4{
+                    margin-top: 15px;
+                    color: white;
+                    display: block;
+                    font-size: 26px;
+                    font-weight: 300;
+                    margin-bottom: 0.5rem;
+                }
+                .icono-redes{
+                    list-style: none;
+                    font-size: 28px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 2.5rem;
+                    li{
+                        margin-top: 5px;
+                        margin-bottom: 15px;
+                        a{
+                            color: #fff;
+                            i{
+                                height: 40px;
+                                width: 40px;
+                                text-align: center;
+                                line-height: 40px;
+                                border-radius: 50%;
+                            }
+                            .facebook-bg{
+                                background: #3B5998;
+                            }
+                            .instagram-bg{
+                                background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+                            }
+                            .whatsapp-bg {
+                                background-color: #25d366;
+                            }
+                        }
+                    }
+                }
+                .footer-widget{
+                    width: 100%;
+                    list-style: none;
+                    font-size: 16px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    h4{
+                        color: white;
+                        font-size: 24px;
+                        font-weight: 300;
+                        margin-top: 15px;
+                    }
+                    .enlaces-footer{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 5px;
+                        margin-bottom: 15px;
+                        li{
+                            a{
+                                text-decoration: none;
+                                color: white;
+                                font-size: 18px;
+                                font-weight: 200;
+                            }
+                            a:hover{
+                                color: $color-principal;
+                            }
+                        }
+                    }
+                    @media screen and (min-width: 800px){
+                        .enlaces-footer{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 2rem
+                        }
+                    }
+                }
+            }
+        }
+        .copy{
+            padding: .6rem;
+            color: white;
+            a{
+                text-decoration: none;
+                color: $color-principal;
+            }
+        }
+    }
+}

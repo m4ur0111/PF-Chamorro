@@ -1,0 +1,219 @@
+//Importaciones de variables y constantes
+@import "../vars/constantes";
+
+/*Nosotros*/
+/*Hero Responsive*/
+    .banner-nosotros{
+        display: grid;
+        grid-template-rows: 2 1fr;
+        padding: 2rem;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        height: 450px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/contacto-banner.jpg);
+        background-position: right;
+        background-size: cover;
+        .titulo-nosotros{
+            color: white;
+            font-size: 64px;
+            font-weight: 400;
+        }
+        .parrafo-nosotros{
+            color: white;
+            padding-top: 60px;
+            font-size: 32px;
+            text-align: center;  
+        }
+    }
+    /*Main Mobile*/
+    .contenedor-todo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        .contenedor-nosotros-general1{
+            display: flex;
+            padding: 3rem;
+            max-width: 80%;
+            border-bottom: 1px solid $color-principal;
+            .valores-contenedor{
+                .img-valores {
+                    display: none;
+                }
+                .textos-valores{
+                    text-align: center;
+                    .titulo-valores{
+                        font-size: 30px;
+                        color: black;
+                        font-weight: 400;
+                        padding-top: 10px;
+                        padding-bottom: 15px;
+                    }
+                    .parrafo-valores{
+                        font-size: 20px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        .contenedor-nosotros-general2{
+            display: flex;
+            padding: 3rem;
+            .valores-contenedor{
+                .img-valores {
+                    display: none;
+                }
+                .textos-valores{
+                    text-align: center;
+                    .titulo-valores{
+                        font-size: 30px;
+                        color: black;
+                        font-weight: 400;
+                        padding-top: 10px;
+                        padding-bottom: 15px;
+                    }
+                    .parrafo-valores{
+                        font-size: 20px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    .banner-nosotros-2{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $gradient-banner;
+        position: relative;
+        .titulo-nosotros-2{
+            color: white;
+            font-size: 24px;
+            font-weight: 400;
+            padding-top: 40px;
+            text-align: center;
+        }
+        .parrafo-nosotros-2{
+            color: white;
+            padding-top: 30px;
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .boton-nosotros{
+            display: flex;
+            margin-top: 20px;
+            a{
+                .boton-leermas{
+                    @extend %boton-largo;
+                }
+                .boton-leermas:hover{
+                    background: $color-secundario;
+                }
+            }
+        }
+    }
+    .btn-wsp{
+        @include fixed;
+        @extend %boton-wsp;
+    }
+    .btn-wsp:hover{
+        text-decoration: none;
+        color: #0df053;
+        background: white;
+    }
+    @media screen and (min-width: 900px){
+        .banner-nosotros-2{
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #0F2027;
+            background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+            background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+            position: relative;
+            .titulo-nosotros-2{
+                color: white;
+                font-size: 32px;
+                font-weight: 400;
+                padding-top: 60px;
+                text-align: center;
+            }
+            .parrafo-nosotros-2{
+                color: white;
+                padding-top: 50px;
+                font-size: 64px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    @media screen and (min-width: 1060px){
+        .contenedor-todo{
+            .contenedor-nosotros-general1{
+                max-width: 100%;
+                border-bottom: none;
+                margin-bottom: -100px;
+                .valores-contenedor{
+                    display: grid;
+                    gap: 1.5rem;
+                    grid-template-columns: 1fr 1fr;
+                    grid-auto-flow: dense;
+                    justify-items: center;
+                    align-items: center;
+                    gap: 5rem;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    .img-valores{
+                        display: block;
+                        height: 20rem;
+                    }
+                }
+            }
+            .contenedor-nosotros-general2{
+                .valores-contenedor{
+                    display: grid;
+                    gap: 1.5rem;
+                    grid-template-columns: 1fr 1fr;
+                    grid-auto-flow: dense;
+                    justify-items: center;
+                    align-items: center;
+                    gap: 5rem;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    .img-valores{
+                        display: block;
+                        height: 20rem;
+                    }
+                }
+            }
+        }
+        /*Banner de contacto en nosotros*/
+        .banner-nosotros-2{
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #0F2027;
+            background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+            background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+            position: relative;
+            .titulo-nosotros-2{
+                color: white;
+                font-size: 24px;
+                font-weight: 400;
+                padding-top: 40px;
+                text-align: center;
+            }
+            .parrafo-nosotros-2{
+                color: white;
+                padding-top: 30px;
+                font-size: 48px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    }

@@ -1,0 +1,221 @@
+@import "../vars/constantes";
+@import "../vars/variables";
+
+/* Servicios Remotos*/
+/*main*/
+.cover-remoto{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .texto-informacion-cover{
+        width: 50%;
+        .nexo-tit-remoto{
+            color: black;
+            border-bottom: 2px solid $color-principal;
+            padding-bottom: 15px;
+            font-weight: 400;
+            margin-top: 25px;
+            font-size: 50px;
+        }
+    }
+}
+/*Tabla Mobile*/
+.fondo-tabla{
+    .contenedor-tabla{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 250px;
+        margin-top: 80px;
+        .panel-principal{
+            background-color: #fff;
+            border-radius: 10px;
+            z-index: 10;
+            .columna-elementos{
+
+                text-align: center;
+                .icono-columna-remoto {
+                    margin-bottom: 25px;
+                    height: 100px;
+                }
+                .titulo-elementos-tabla{
+                    font-size: 28px;
+                    font-weight: 400;
+                }
+                .textos-tabla{
+                    list-style: none;
+                    text-align: center;
+                    .textos-tabla-item{
+                        padding: .4rem;
+                        border-bottom: 1px solid $color-principal;
+                    }
+                }
+            }
+        }
+    }
+}
+.carta-producto{
+    width: 200px;
+    .imagen-producto{
+        img{
+            display: none;
+        }
+    }
+}
+/*Tabla Tablet*/
+@media screen and (min-width: 900px){
+    .fondo-tabla{
+        .contenedor-tabla{
+            width: 650px;
+        }
+    }
+}
+/*Tabla Desktop*/
+@media screen and (min-width: 1024px) {
+    .fondo-tabla{
+        .contenedor-tabla{
+            margin: 0 auto;
+            padding: 50px 0 0;
+            max-width: 960px;
+            width: 100%;
+            margin-top: 80px;
+            .panel-principal{
+                background-color: #fff;
+                border-radius: 10px;
+                padding: 15px 25px;
+                position: relative;
+                width: 100%;
+                z-index: 10;
+                box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+                display: flex;
+                flex-direction: row;
+                *{
+                    text-align: center;
+                }
+                .columna-elementos{
+                    border-bottom: none;
+                    border-right: 1px solid #e1f1ff;
+                    flex-basis: 100%;
+                    padding: 25px 50px;
+                    .titulo-elementos-tabla{
+                        color: #888;
+                        font-weight: 600;
+                        font-size: 20px;
+                        letter-spacing: 1px;
+                    }
+                    .textos-tabla{
+                        color: black;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        margin: 50px 0 25px;
+                        .textos-tabla-item{
+                            border-top: 1px solid #e1f1ff;
+                            font-size: 13px;
+                            line-height: 1.5;
+                            padding: 15px 0;
+                        }
+                        .textos-tabla-item:last-child{
+                            border-bottom: 1px solid #e1f1ff;
+                        }                        
+                    }
+                }
+                .columna-elementos:last-child{
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+/*Producto de compra*/
+.carta-producto{
+    width: 350px;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 50px auto;
+    background: #fafafa;
+    border-radius: 12px;
+    .imagen-producto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        padding: 50px;
+        background: #ebe7e7;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+    }
+    .detalles-producto{
+        padding: 30px;
+        .categoria-producto{
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ccc;
+            margin-bottom: 18px;
+        }
+        h4{
+            a{
+                font-weight: 500;
+                display: block;
+                margin-bottom: 18px;
+                text-transform: uppercase;
+                color: #363636;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            a:hover{
+                color: $color-principal;
+            }
+        }
+        p{
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 18px;
+            color: #999;
+        }
+        .detalles-pie-producto{
+            overflow: hidden;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            div{
+                float: left;
+                width: 50%;
+            }
+            .precio-producto{
+                font-size: 18px;
+                color: $color-principal;
+                font-weight: 600;
+            }
+            .precio-producto small{
+                font-size: 80%;
+                font-weight: 400;
+                text-decoration: line-through;
+                display: inline-block;
+                margin-right: 5px;
+            }
+            .producto-links{
+                text-align: right;
+                a{
+                    display: inline-block;
+                    margin-left: 5px;
+                    color: #b6b2b2;
+                    transition: 0.3s;
+                    font-size: 17px;
+                    text-decoration: none;
+                    i{
+                        font-size: 20px;
+                    }
+                }
+                a:hover{
+                    color: $color-principal;
+                }
+            }
+        }
+    }
+}
